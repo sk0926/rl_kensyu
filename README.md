@@ -1,4 +1,4 @@
-# 事前準備
+# 強化学習研修・事前準備
 ### Anacondaのインストール
 https://www.anaconda.com/products/individual  
 https://www.python.jp/install/anaconda/macos/install.html
