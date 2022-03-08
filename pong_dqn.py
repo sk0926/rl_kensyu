@@ -15,9 +15,6 @@ def repeat_upsample(rgb_array, k=1, l=1, err=[]):
             err.append('logged')
         return rgb_array
 
-    # repeat the pixels k times along the y axis and l times along the x axis
-    # if the input image is of shape (m,n,3), the output image will be of shape (k*m, l*n, 3)
-
     return np.repeat(np.repeat(rgb_array, k, axis=0), l, axis=1)
 
 
@@ -26,7 +23,6 @@ env = make_atari_env('PongNoFrameskip-v4', num_env=1, seed=0)
 env = VecFrameStack(env, n_stack=4)
 
 model = DQN(CnnPolicy, env, verbose=1, tensorboard_log="./pong_tensorboard/")
-# model = ACER('CnnPolicy', env, verbose=1)
 model.learn(total_timesteps=1000000)
 model.save("model_pong")
 

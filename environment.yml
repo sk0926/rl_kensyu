@@ -7,16 +7,7 @@ dependencies:
   - pip:
     - ale-py==0.7.4
     - atari-py==0.2.5
-    - box2d==2.3.2
-    - box2d-py==2.3.8
-    - cloudpickle==1.6.0
+    - ray
     - gym==0.18.3
-    - importlib-metadata==4.11.2
-    - importlib-resources==5.4.0
-    - joblib==1.1.0
-    - opencv-python==4.5.5.62
-    - pillow==8.2.0
-    - pyglet==1.5.15
     - stable-baselines==2.10.2
     - tensorflow==1.15.0
-prefix: /home/mcm/anaconda3/envs/test2

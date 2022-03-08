@@ -24,12 +24,14 @@ def repeat_upsample(rgb_array, k=1, l=1, err=[]):
     return np.repeat(np.repeat(rgb_array, k, axis=0), l, axis=1)
 
     
-env = gym.make('CartPole-v1')
-model = DQN.load("model_cartpole")
+# env = gym.make('CartPole-v1')
+# model = DQN.load("model_cartpole_dqn")
+env = make_atari_env('PongNoFrameskip-v4', num_env=1, seed=0)
+env = VecFrameStack(env, n_stack=4)
+model = DQN.load('model_pong_dqn')
 
 # Enjoy trained agent
 obs = env.reset()
-
 viewer = rendering.SimpleImageViewer()
 
 while True:
@@ -39,4 +41,4 @@ while True:
     rgb = env.render('rgb_array')
     upscaled=repeat_upsample(rgb,4, 4)
     viewer.imshow(upscaled)
-    time.sleep(0.01)
+    time.sleep(0.05)
