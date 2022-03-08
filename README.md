@@ -1,6 +1,6 @@
 # 事前準備
 ### Anacondaのインストール
-https://www.anaconda.com/products/individual
+https://www.anaconda.com/products/individual  
 https://www.python.jp/install/anaconda/macos/install.html
 
 ### 必要なファイルのダウンロード
